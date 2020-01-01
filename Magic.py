@@ -36,8 +36,9 @@ while True:
 
 
     mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, np.ones((3,3),np.uint8))
+    cv2.imshow('check',mask)
     mask = cv2.morphologyEx(mask, cv2.MORPH_DILATE, np.ones((3,3),np.uint8))
- 
+    cv2.imshow('check1',mask)
  
     #creating an inverted mask to segment out the cloth from the frame
     mask2 = cv2.bitwise_not(mask)
