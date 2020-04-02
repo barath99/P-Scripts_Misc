@@ -1,6 +1,4 @@
 import csv
-from csv import reader
-from csv import writer
 import random
 import math as mt
 from itertools import islice
@@ -92,7 +90,7 @@ MentoringGroups = [list(islice(Inputt, elem))
 
 #print("Groups of Mentees for Corresponding Mentors -> ", MentoringGroups)
 
-# print(len(MentoringGroups))   I am very happy... Its successful XD
+# print(len(MentoringGroups))
 
 def add_column_in_csv(input_file, output_file, transform_row):
     """ Append a column in existing csv using csv.reader / csv.writer classes"""
