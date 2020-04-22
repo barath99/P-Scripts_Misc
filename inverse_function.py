@@ -15,3 +15,7 @@ for i in range(n_mentors):
 
 for mentee, mentor in lst:
     print("mentee: {} mentor: {}".format(mentee, mentor))
+
+df = pd.DataFrame(lst)
+print(df)
+csv = df.to_csv('AllocationCompleted.csv', index=False)
