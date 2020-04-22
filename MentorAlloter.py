@@ -4,7 +4,7 @@ import math as mt
 from itertools import islice
 
 # Reading the csv file containing the list of Mentee----------
-f = open('D:\menteeXL.csv',encoding='utf-8-sig')
+f = open('menteeXL.csv',encoding='utf-8-sig')
 readFile = csv.reader(f)
 for col in readFile:
     MenteeData =list(readFile)
@@ -12,7 +12,7 @@ for col in readFile:
 #-------------------------------------------------------------
 
 # Reading the csv file containing the list of Mentors---------
-g = open('D:\mentorXL.csv',encoding='utf-8-sig')
+g = open('mentorXL.csv',encoding='utf-8-sig')
 readFileM = csv.reader(g)
 for col in readFileM:
     MentorData =list(readFileM)
@@ -108,11 +108,11 @@ def add_column_in_csv(input_file, output_file, transform_row):
             # Write the updated row / list to the output file
             csv_writer.writerow(row)
 
-with open("D:\out.csv", "w", newline="") as q:
+with open("output_data.csv", "w", newline="") as q:
     writer = csv.writer(q)
     writer.writerows(MentorData)
 
-add_column_in_csv('D:\out.csv', 'D:\FinalAllotmentList.csv', lambda row, line_num: row.append(MentoringGroups[line_num - 1]))
+add_column_in_csv('output_data.csv', 'FinalAllotmentList.csv', lambda row, line_num: row.append(MentoringGroups[line_num - 1]))
 #-------------------------------------
 
 f.close()
